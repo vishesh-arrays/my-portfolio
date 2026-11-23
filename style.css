@@ -177,6 +177,38 @@ display: block;
     margin-top: 12px;
     text-align: center;
 }
-
-
-
+.hobby-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 18px;
+}
+.hobby-card{
+    padding: 25px;
+    min-height:170px;
+    border-radius: 15px;
+    border: 1px solid #ffffff18;
+    background: #ffffff08;
+    transition: transform 0.3s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
+}
+.hobby-card:hover{
+    transform: translateY(-8px);
+    background: #8a72ff18;
+    border-color: #8a72ff80;
+}
+.hooby-number {
+    font-size: 12px;
+    color: #a18cff;
+    letter-spacing:2px;
+}
+.hobby-card h3{
+    font-size:17px;
+    margin-top: 18px;
+    margin-bottom: 10px;
+}
+.hobby-card p{
+    color: #a9acc2;
+    font-size: 13px;
+    line-height: 1.7;
+}
