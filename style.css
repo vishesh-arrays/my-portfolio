@@ -1,9 +1,17 @@
-body {
-    margin:0;
-    background-color: darkblue;
-    color: white;
-    font-family: Arial, sans-serif;
+/*over all base*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+/*body*/
+body{
+    background: #070811;
+    color: #f5f5fa;
+    font-family: 'Inter', sans-serif;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 .animated-background{
     position: fixed;
@@ -11,57 +19,70 @@ body {
     overflow: hidden;
     z-index: 0;
     pointer-events: none;
-}
-animated-background::before{
-    content: "";
-    position: absolute;
-    width: 65vw;
-    height: 65vw;
-    top:-20%;
-    left:-15%;
-    border-radius: 50%;
-
     background: radial-gradient(
-        circle, rgba(50,80,255,0.7), transaprent 70%
-    );
-    filter: blur(90px);
-    animation:moveBlue 15s ease-in-out infinite alternate;
+            circle at 50% 50%,
+            #101327 0%,
+            #070811 75%
+        );
 }
-.animated-background::after{
-    content: "";
+.glow{
     position: absolute;
-    width: 65vw;
-    height: 65vw;
-    top:-20%;
-    left:-15%;
     border-radius: 50%;
-
-    background: radial-gradient(
-        circle, rgba(150, 40, 255, 0.6), transaprent 70%
-    );
     filter: blur(100px);
-    animation: movePurple 18s ease-in-out infinite alternate;
+    opacity: 0.45;
+    will-change: transform;
+}
+.glow-blue {
+    width: 550px;
+    height: 550px;
+    background: #263bff;
+    top: -180px;
+    left: -150px;
 
+    animation: blueMove 16s ease-in-out infinite alternate;
 }
-@keyframes moveBlue{
-    from{
-        transform: transalte(0,0);
-    }
-    to{
-        transform: translate(35vw, 25vh);
-    }
+
+.glow-purple {
+    width: 600px;
+    height: 600px;
+    background: #781fff;
+    bottom: -250px;
+    right: -150px;
+
+    animation: purpleMove 19s ease-in-out infinite alternate;
 }
-@keyframes movePurple{
+@keyframes blueMove {
     from {
-        transform: translate(-30vw, -25vh);
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(350px, 250px);
     }
 }
-.content{
-    position: relative;
-    z-index: 1;
+
+@keyframes purpleMove {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(-300px, -200px);
+    }
+}
+
+.hero{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 30px 20px;
+}
+.eyebrow{
+        color: #9298c0;
+    letter-spacing: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
