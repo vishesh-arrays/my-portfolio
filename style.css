@@ -1,9 +1,67 @@
 body {
-    background-color: yellow;
-    color: blue;
-    font-family: Arial, sans-serif
+    margin:0;
+    background-color: darkblue;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
 }
-h1 {
-    background-color: aqua;
-    color:red;
+.animated-background{
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+animated-background::before{
+    content: "";
+    position: absolute;
+    width: 65vw;
+    height: 65vw;
+    top:-20%;
+    left:-15%;
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle, rgba(50,80,255,0.7), transaprent 70%
+    );
+    filter: blur(90px);
+    animation:moveBlue 15s ease-in-out infinite alternate;
+}
+.animated-background::after{
+    content: "";
+    position: absolute;
+    width: 65vw;
+    height: 65vw;
+    top:-20%;
+    left:-15%;
+    border-radius: 50%;
+
+    background: radial-gradient(
+        circle, rgba(150, 40, 255, 0.6), transaprent 70%
+    );
+    filter: blur(100px);
+    animation: movePurple 18s ease-in-out infinite alternate;
+
+}
+@keyframes moveBlue{
+    from{
+        transform: transalte(0,0);
+    }
+    to{
+        transform: translate(35vw, 25vh);
+    }
+}
+@keyframes movePurple{
+    from {
+        transform: translate(-30vw, -25vh);
+    }
+}
+.content{
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
