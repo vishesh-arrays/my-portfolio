@@ -51,25 +51,7 @@ body{
 
     animation: purpleMove 19s ease-in-out infinite alternate;
 }
-@keyframes blueMove {
-    from {
-        transform: translate(0, 0);
-    }
 
-    to {
-        transform: translate(350px, 250px);
-    }
-}
-
-@keyframes purpleMove {
-    from {
-        transform: translate(0, 0);
-    }
-
-    to {
-        transform: translate(-300px, -200px);
-    }
-}
 
 .hero{
     min-height: 100vh;
