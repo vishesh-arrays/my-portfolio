@@ -87,7 +87,7 @@ body{
     margin-bottom: 20px;
 }
 .hero h1{
-    font-famiy: 'Hanjet', sans-serif;
+    font-family: 'Hanjet', sans-serif;
     font-size: clamp(65px, 12vw, 125px);
     color: white;
     line-height: 1;
@@ -124,3 +124,59 @@ footer span{
     transform: translateY(-4px);
     box-shadow: 0 0 25px #6558a855;
 }
+
+
+.section-container{
+    width:min(1100px, 90%);
+    margin:0 auto;
+    padding: 100px 0;
+}
+.section-heading{
+    text-align: center;
+    margin-bottom:45px;
+}
+.section-heading h2{
+    font-size: clamp(32px, 5vw, 48px);
+}
+
+.about-card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+
+    padding: 30px;
+    background: #ffffff09;
+    border: 1px solid #ffffff18;
+    border-radius: 20px;
+
+    backdrop-filter: blur(12px);
+}
+.about-text h3{
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+.about-text p{
+    color: rgb(184, 187, 208);
+    line-height: 1.9;
+    font-size: 15px;
+}
+.car-image img{
+    width:100%;
+    border-radius: 14px;
+    display: block;
+    transition: transfrom 0.4s ease;
+}
+.car-image img:hover{
+    transform:scale(1.03);
+}
+.car-image span{
+display: block;
+    color: #8589a4;
+    font-size: 12px;
+    margin-top: 12px;
+    text-align: center;
+}
+
+
+
